@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: skyblue;
+}
+
+.grass,
+.sky,
+.road {
+    position: relative;
+}
+
+/* start sky section */
+.sky {
+    width: 100%;
+    height: 29%;
+    background-color: skyblue;
+}
+/* work with clouds */
+.cloud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: cloudFly 60s both infinite linear reverse;
+}
+.cloud:nth-child(1) {
+    animation-duration: 65s;
+    animation-delay: 12s;
+    z-index: 1;
+    opacity: 0.5;
+    width: 200px;
+    top: 150px;
+}
+.cloud:nth-child(2) {
+    animation-duration: 100s;
+    animation-delay: 10s;
+    z-index: 10;
+    width: 300px;
+}
+.cloud:nth-child(3) {
+    animation-duration: 82s;
+    z-index: 4;
+    opacity: 0.7;
+    width: 250px;
+    top: 100px;
+}
+/* work with sun and moon*/
+.sun,
+.moon {
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 65%;
+    left: 14%;
+}
+.sun {
+    width: 120px;
+    height: 120px;
+    background-color: orange;
+    animation: shining 140s both infinite linear;
+}
+.moon {
+    width: 110px;
+    height: 110px;
+    background-color: whitesmoke;
+    /* animation: rotate 5s; */
+}
+/* end sky section */
+
+/* start grass section */
+.grass {
+    width: 100%;
+    height: 43%;
+    background: url(./../img/gress_bg.png), url(../img/field.png),
+        url(../img/mountine.png), transparent;
+    background-repeat: repeat-x, repeat-x, repeat-x;
+    background-size: 14%, 405px 239px, 968px 300px;
+    background-position: -2px bottom;
+}
+.tree_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -7px;
+}
+.tree {
+    height: 180px;
+    width: auto;
+    margin-top: 23px;
+}
+/* and grass section */
+
+/* road section */
+.road {
+    width: 100%;
+    height: 28%;
+    background-color: dimgray;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+}
+.line {
+    width: 100%;
+    height: 0;
+    border: 5px dashed #fff;
+    position: absolute;
+    top: 45%;
+}
+.mario {
+    position: absolute;
+    top: -27%;
+    left: 0;
+    animation: drive 6s both infinite linear;
+}
+.luigi {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    animation: drive 8s 4s both infinite linear;
+}
+
+@keyframes drive {
+    0% {
+        left: -300px;
+    }
+    100% {
+        left: calc(100% + 400px);
+    }
+}
+
+@keyframes cloudFly {
+    0% {
+        left: -300px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes shining {
+    0% {
+        top: 65%;
+        left: 14%;
+    }
+    6.25% {
+        top: 50%;
+        left: 19%;
+    }
+    12.5% {
+        top: 31%;
+        left: 28%;
+    }
+    18.75% {
+        top: 20%;
+        left: 36%;
+    }
+
+    22.92% {
+        top: 12%;
+        left: 44%;
+    }
+    27.8% {
+        top: 12%;
+        left: 56%;
+    }
+
+    31.25% {
+        top: 20%;
+        left: 64%;
+    }
+    37.5% {
+        top: 31%;
+        left: 73%;
+    }
+    43.75% {
+        top: 50%;
+        left: 81%;
+    }
+    50% {
+        top: 65%;
+        left: 86%;
+    }
+    100% {
+        top: 65%;
+        left: 86%;
+    }
+}
