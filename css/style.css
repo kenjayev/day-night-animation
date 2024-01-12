@@ -56,6 +56,79 @@ body {
     }
 }
 
+/* start universe animation */
+.universe,
+.night_shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    animation: universe 140s linear infinite;
+}
+.universe i {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: star linear infinite;
+}
+.night_shadow {
+    background-color: rgba(0, 0, 0, 0.43);
+    z-index: 50;
+}
+
+@keyframes universe {
+    0% {
+        opacity: 0.3;
+    }
+    3% {
+        opacity: 0;
+    }
+
+    3%,
+    50% {
+        opacity: 0;
+    }
+
+    52% {
+        opacity: 0.3;
+    }
+    53% {
+        opacity: 0.5;
+    }
+    55% {
+        opacity: 0.65;
+    }
+
+    57%,
+    96% {
+        opacity: 1;
+    }
+
+    97% {
+        opacity: 0.7;
+    }
+    99% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+@keyframes star {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    10%,
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(70px, -140px);
+    }
+}
 .horizon_bg,
 .horizon {
     position: absolute;
@@ -118,20 +191,20 @@ body {
         opacity: 0;
     }
 }
+/* start universe animation */
 
 .grass,
 .sky,
 .road {
     position: relative;
+    z-index: 5;
 }
 
 /* start sky section */
 .sky {
     width: 100%;
     height: 29%;
-    /* background-color: skyblue; */
 }
-/* work with clouds */
 .cloud {
     position: absolute;
     top: 0;
@@ -141,23 +214,40 @@ body {
 .cloud:nth-child(1) {
     animation-duration: 65s;
     animation-delay: 12s;
-    z-index: 1;
+    z-index: 3;
     opacity: 0.5;
     width: 200px;
-    top: 150px;
+    top: 160px;
 }
 .cloud:nth-child(2) {
     animation-duration: 100s;
-    animation-delay: 10s;
+    opacity: 0.6;
     z-index: 10;
-    width: 300px;
+    width: 175px;
 }
 .cloud:nth-child(3) {
     animation-duration: 82s;
-    z-index: 4;
+    animation-delay: -42s;
+    z-index: 6;
     opacity: 0.7;
     width: 250px;
-    top: 100px;
+    top: 90px;
+}
+.cloud:nth-child(4) {
+    animation-duration: 90s;
+    animation-delay: -20s;
+    z-index: 6;
+    opacity: 0.4;
+    width: 220px;
+    top: 130px;
+}
+.cloud:nth-child(5) {
+    animation-duration: 70s;
+    animation-delay: -50s;
+    z-index: 6;
+    opacity: 0.45;
+    width: 190px;
+    top: 60px;
 }
 /* work with sun and moon*/
 .sun,
