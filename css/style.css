@@ -229,21 +229,21 @@ body {
     position: absolute;
     top: -27%;
     left: 0;
-    animation: drive 6s both infinite linear;
+    animation: drive 6s 4s both infinite linear;
 }
 .luigi {
     position: absolute;
     bottom: 10%;
     left: 0;
-    animation: drive 8s 4s both infinite linear;
+    animation: drive 9s both infinite linear;
 }
 
 @keyframes drive {
     0% {
-        left: -300px;
+        left: -500px;
     }
     100% {
-        left: calc(100% + 400px);
+        left: calc(100%);
     }
 }
 
