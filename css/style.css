@@ -1,3 +1,8 @@
+:root {
+    --v1: #be91c6;
+    --s1: #fea798;
+    --s2: #ff846e;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +11,112 @@
 body {
     height: 100vh;
     overflow: hidden;
-    background-color: skyblue;
+    background-size: cover;
+    animation: skyBg 140s infinite linear both;
+}
+@keyframes skyBg {
+    0% {
+        background-color: rgb(34, 111, 221);
+    }
+    3.2% {
+        background-color: rgb(75, 153, 255);
+    }
+    8% {
+        background-color: skyblue;
+    }
+    37.71% {
+        background-color: skyblue;
+    }
+    49% {
+        background-color: rgb(75, 153, 255);
+    }
+    50.5% {
+        background-color: rgb(34, 111, 221);
+    }
+    52.5% {
+        background-color: rgb(11, 81, 172);
+    }
+    55% {
+        background-color: rgb(3, 52, 116);
+    }
+    58.5% {
+        background-color: rgb(1, 31, 70);
+    }
+    91.5% {
+        background-color: rgb(1, 31, 70);
+    }
+    95% {
+        background-color: rgb(3, 52, 116);
+    }
+    97.5% {
+        background-color: rgb(11, 81, 172);
+    }
+    100% {
+        background-color: rgb(34, 111, 221);
+    }
+}
+
+.horizon_bg,
+.horizon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 65%;
+}
+.horizon_bg {
+    height: 75%;
+    background-image: linear-gradient(var(--v1), var(--s1), var(--v1));
+    animation: fade_bg 140s infinite;
+    opacity: 0;
+}
+.horizon {
+    background: radial-gradient(circle at 80% 141%, var(--s2), transparent);
+    opacity: 0;
+    animation: fade 140s 52s infinite;
+    mix-blend-mode: color-burn;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    13% {
+        opacity: 1;
+    }
+    15.5% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade_bg {
+    /* quyosh chiqishi */
+    0% {
+        opacity: 0;
+    }
+    7.25% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+    /* quyosh chiqish */
+
+    /* botishi */
+    36.71% {
+        opacity: 0;
+    }
+    48.71% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .grass,
@@ -19,7 +129,7 @@ body {
 .sky {
     width: 100%;
     height: 29%;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 /* work with clouds */
 .cloud {
@@ -59,15 +169,19 @@ body {
     left: 14%;
 }
 .sun {
-    width: 120px;
-    height: 120px;
+    width: 70px;
+    height: 70px;
     background-color: orange;
-    animation: shining 140s both infinite linear;
+    animation: shining 140s linear both infinite;
+    background: #ffff77;
+    box-shadow: 0 0 50px 10px #ffff77, 0 0 50px 35px #ffff77;
 }
 .moon {
-    width: 110px;
-    height: 110px;
-    background-color: whitesmoke;
+    width: 65px;
+    height: 65px;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 30px #d3e6ff;
+    animation: shining 140s linear 70s both infinite;
     /* animation: rotate 5s; */
 }
 /* end sky section */
