@@ -1,6 +1,9 @@
 function stars() {
+    document.querySelector(".music").play();
+    document.querySelector(".music").volume = 0.4;
+
     let universe = document.querySelector("#universe");
-    let count = 1900;
+    let count = 2500;
     let i = 0;
 
     while (i < count) {
@@ -22,4 +25,23 @@ function stars() {
         i++;
     }
 }
+function dropStar() {
+    let droppedStar = document.querySelector(".cometa");
+    let x = Math.random() * (window.innerWidth / 3);
+    let y = Math.random() * (window.innerHeight / 3);
+    let random = Math.floor(Math.random() * 3);
+    let delay = Math.random() * 4;
+    if (random == 0 || random == 1) {
+        droppedStar.style.right = x + "px";
+        droppedStar.style.top = 0 + "px";
+    } else {
+        droppedStar.style.top = y + "px";
+        droppedStar.style.right = 0 + "px";
+        droppedStar.style.left = "initial";
+    }
+    droppedStar.style.animationDelay = delay + "s";
+    console.log(droppedStar);
+    console.log(delay);
+}
+setInterval(dropStar, 6000);
 stars();

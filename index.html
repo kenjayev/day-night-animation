@@ -8,7 +8,10 @@
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
-        <div class="universe" id="universe"></div>
+        <div class="universe" id="universe">
+            <span class="cometa"></span>
+            <span class="cometa cometa-2"></span>
+        </div>
         <div class="night_shadow"></div>
         <div class="horizon_bg"></div>
         <div class="horizon"></div>
@@ -41,6 +44,13 @@
                 class="luigi"
             />
         </div>
+        <audio
+            src="./mp3/dcpoke__birds-singing.mp3"
+            style="opacity: 1; position: absolute; z-index: 1000; top: 0"
+            class="music"
+            autoplay
+            loop
+        ></audio>
         <script src="./js/main.js"></script>
     </body>
 </html>
