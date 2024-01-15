@@ -1,7 +1,4 @@
 function stars() {
-    document.querySelector(".music").play();
-    document.querySelector(".music").volume = 0.4;
-
     let universe = document.querySelector("#universe");
     let count = 2500;
     let i = 0;
@@ -20,8 +17,6 @@ function stars() {
         star.style.height = 1.2 + size + "px";
         star.style.animationDuration = 10 + duration + "s";
         star.style.animationDelay = duration + "s";
-
-        universe.appendChild(star);
         i++;
     }
 }
