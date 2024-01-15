@@ -1,4 +1,4 @@
-##An animated one-page site
+#An animated one-page site
 
 <hr />
 worked with these:
@@ -9,6 +9,8 @@ animation properties;
 colors;
 transforms;
 opacity;
+<br />
+<b>Only desktop screens. Not for mob</b>
 <br />
 <hr />
 
