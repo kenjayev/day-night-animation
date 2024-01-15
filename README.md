@@ -10,5 +10,5 @@ colors;
 transforms;
 opacity;
 
-<img src="img/for_readme/day" />
+<img src="img/for_readme/day.pnj" />
 <img src="img/for_readme/night" />
