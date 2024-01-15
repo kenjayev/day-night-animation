@@ -13,4 +13,4 @@ opacity;
 <hr />
 
 ![alt text](img/for_readme/day.png "Title Text")
-![alt text](img/for_readme/nigh.png "Title Text")
+![alt text](img/for_readme/night.png "Title Text")
