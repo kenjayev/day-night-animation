@@ -10,5 +10,6 @@ colors;
 transforms;
 opacity;
 
+![alt text](img/for_readme/day.png "Title Text")
 <img src="img/for_readme/day.pnj" />
 <img src="img/for_readme/night" />
