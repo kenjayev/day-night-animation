@@ -1,0 +1,221 @@
+/* change sky color */
+@keyframes skyBg {
+    0% {
+        background-color: rgb(34, 111, 221);
+    }
+    3.2% {
+        background-color: rgb(75, 153, 255);
+    }
+    8% {
+        background-color: skyblue;
+    }
+    37.71% {
+        background-color: skyblue;
+    }
+    49% {
+        background-color: rgb(75, 153, 255);
+    }
+    50.5% {
+        background-color: rgb(34, 111, 221);
+    }
+    52.5% {
+        background-color: rgb(11, 81, 172);
+    }
+    55% {
+        background-color: rgb(3, 52, 116);
+    }
+    58.5% {
+        background-color: rgb(1, 31, 70);
+    }
+    91.5% {
+        background-color: rgb(1, 31, 70);
+    }
+    95% {
+        background-color: rgb(3, 52, 116);
+    }
+    97.5% {
+        background-color: rgb(11, 81, 172);
+    }
+    100% {
+        background-color: rgb(34, 111, 221);
+    }
+}
+
+@keyframes dropStar {
+    0% {
+        transform: rotate(350deg) translateX(200px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    25% {
+        transform: rotate(350deg) translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(345deg) translateX(-1200px);
+        opacity: 0;
+    }
+}
+
+/* dark ier for night */
+@keyframes universe {
+    0% {
+        opacity: 0.3;
+    }
+    3% {
+        opacity: 0;
+    }
+
+    3%,
+    50% {
+        opacity: 0;
+    }
+
+    52% {
+        opacity: 0.3;
+    }
+    53% {
+        opacity: 0.5;
+    }
+    55% {
+        opacity: 0.65;
+    }
+
+    57%,
+    96% {
+        opacity: 1;
+    }
+
+    97% {
+        opacity: 0.7;
+    }
+    99% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+/* animation small stars */
+@keyframes star {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    10%,
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(70px, -140px);
+    }
+}
+
+/* main fade for sunset */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    13% {
+        opacity: 1;
+    }
+    15.5% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ikkilamchi shafaq */
+@keyframes fade_bg {
+    /* quyosh chiqishi */
+    0% {
+        opacity: 0;
+    }
+    7.25% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+    /* quyosh chiqish */
+
+    /* botishi */
+    36.71% {
+        opacity: 0;
+    }
+    48.71% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* for cars and clouds*/
+@keyframes drive {
+    0% {
+        left: -400px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* for sun and moon */
+@keyframes shining {
+    0% {
+        top: 65%;
+        left: 14%;
+    }
+    6.25% {
+        top: 50%;
+        left: 19%;
+    }
+    12.5% {
+        top: 31%;
+        left: 28%;
+    }
+    18.75% {
+        top: 20%;
+        left: 36%;
+    }
+
+    22.92% {
+        top: 12%;
+        left: 44%;
+    }
+    27.8% {
+        top: 12%;
+        left: 56%;
+    }
+
+    31.25% {
+        top: 20%;
+        left: 64%;
+    }
+    37.5% {
+        top: 31%;
+        left: 73%;
+    }
+    43.75% {
+        top: 50%;
+        left: 81%;
+    }
+    50% {
+        top: 65%;
+        left: 86%;
+    }
+    100% {
+        top: 65%;
+        left: 86%;
+    }
+}

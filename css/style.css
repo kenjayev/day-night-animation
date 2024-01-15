@@ -1,3 +1,5 @@
+@import url("./animation.css");
+
 :root {
     --v1: #be91c6;
     --s1: #fea798;
@@ -11,49 +13,20 @@
 body {
     height: 100vh;
     overflow: hidden;
-    background-size: cover;
     animation: skyBg 140s infinite linear both;
 }
-@keyframes skyBg {
-    0% {
-        background-color: rgb(34, 111, 221);
-    }
-    3.2% {
-        background-color: rgb(75, 153, 255);
-    }
-    8% {
-        background-color: skyblue;
-    }
-    37.71% {
-        background-color: skyblue;
-    }
-    49% {
-        background-color: rgb(75, 153, 255);
-    }
-    50.5% {
-        background-color: rgb(34, 111, 221);
-    }
-    52.5% {
-        background-color: rgb(11, 81, 172);
-    }
-    55% {
-        background-color: rgb(3, 52, 116);
-    }
-    58.5% {
-        background-color: rgb(1, 31, 70);
-    }
-    91.5% {
-        background-color: rgb(1, 31, 70);
-    }
-    95% {
-        background-color: rgb(3, 52, 116);
-    }
-    97.5% {
-        background-color: rgb(11, 81, 172);
-    }
-    100% {
-        background-color: rgb(34, 111, 221);
-    }
+.w100 {
+    width: 100%;
+}
+.night_shadow {
+    background-color: rgba(0, 0, 0, 0.43);
+    z-index: 50;
+}
+.grass,
+.sky,
+.road {
+    position: relative;
+    z-index: 5;
 }
 
 /* start universe animation */
@@ -62,7 +35,6 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
     animation: universe 140s linear infinite;
 }
@@ -72,13 +44,8 @@ body {
     border-radius: 50%;
     animation: star linear infinite;
 }
-.night_shadow {
-    background-color: rgba(0, 0, 0, 0.43);
-    z-index: 50;
-}
 .cometa {
     position: absolute;
-    top: 50%;
     left: 50%;
     top: 50px;
     right: 0;
@@ -102,196 +69,45 @@ body {
     height: 2px;
     background-image: linear-gradient(90deg, #fff, transparent);
 }
-@keyframes dropStar {
-    0% {
-        transform: rotate(350deg) translateX(200px);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    25% {
-        transform: rotate(350deg) translateX(-1000px);
-        opacity: 0;
-    }
-    100% {
-        transform: rotate(345deg) translateX(-1200px);
-        opacity: 0;
-    }
-}
-@keyframes universe {
-    0% {
-        opacity: 0.3;
-    }
-    3% {
-        opacity: 0;
-    }
 
-    3%,
-    50% {
-        opacity: 0;
-    }
-
-    52% {
-        opacity: 0.3;
-    }
-    53% {
-        opacity: 0.5;
-    }
-    55% {
-        opacity: 0.65;
-    }
-
-    57%,
-    96% {
-        opacity: 1;
-    }
-
-    97% {
-        opacity: 0.7;
-    }
-    99% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 0.3;
-    }
-}
-@keyframes star {
-    0% {
-        opacity: 0;
-        transform: translate(0, 0);
-    }
-    10%,
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translate(70px, -140px);
-    }
-}
 .horizon_bg,
 .horizon {
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
-    width: 100%;
-    height: 65%;
+    opacity: 0;
 }
 .horizon_bg {
     height: 75%;
     background-image: linear-gradient(var(--v1), var(--s1), var(--v1));
     animation: fade_bg 140s infinite;
-    opacity: 0;
 }
 .horizon {
+    height: 65%;
     background: radial-gradient(circle at 80% 141%, var(--s2), transparent);
-    opacity: 0;
     animation: fade 140s 52s infinite;
     mix-blend-mode: color-burn;
-}
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    13% {
-        opacity: 1;
-    }
-    15.5% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-@keyframes fade_bg {
-    /* quyosh chiqishi */
-    0% {
-        opacity: 0;
-    }
-    7.25% {
-        opacity: 1;
-    }
-    14% {
-        opacity: 0;
-    }
-    /* quyosh chiqish */
-
-    /* botishi */
-    36.71% {
-        opacity: 0;
-    }
-    48.71% {
-        opacity: 1;
-    }
-    51% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-/* start universe animation */
-
-.grass,
-.sky,
-.road {
-    position: relative;
-    z-index: 5;
 }
 
 /* start sky section */
 .sky {
-    width: 100%;
     height: 29%;
 }
 .cloud {
     position: absolute;
     top: 0;
     left: 0;
-    animation: cloudFly 60s both infinite linear reverse;
+    animation: drive 60s both infinite linear reverse;
+    animation-duration: var(--duration);
+    animation-delay: var(--delay);
+    z-index: var(--z);
+    opacity: var(--o);
+    width: var(--width);
+    top: var(--to);
 }
-.cloud:nth-child(1) {
-    animation-duration: 65s;
-    animation-delay: 12s;
-    z-index: 3;
-    opacity: 0.5;
-    width: 200px;
-    top: 160px;
-}
-.cloud:nth-child(2) {
-    animation-duration: 100s;
-    opacity: 0.6;
-    z-index: 10;
-    width: 175px;
-}
-.cloud:nth-child(3) {
-    animation-duration: 82s;
-    animation-delay: -42s;
-    z-index: 6;
-    opacity: 0.7;
-    width: 250px;
-    top: 90px;
-}
-.cloud:nth-child(4) {
-    animation-duration: 90s;
-    animation-delay: -20s;
-    z-index: 6;
-    opacity: 0.4;
-    width: 220px;
-    top: 130px;
-}
-.cloud:nth-child(5) {
-    animation-duration: 70s;
-    animation-delay: -50s;
-    z-index: 6;
-    opacity: 0.45;
-    width: 190px;
-    top: 60px;
-}
-/* work with sun and moon*/
+
+/* work with sun and moon */
 .sun,
 .moon {
     border-radius: 50%;
@@ -299,28 +115,27 @@ body {
     transform: translate(-50%, -50%);
     top: 65%;
     left: 14%;
+    animation: shining 140s linear both infinite;
 }
 .sun {
     width: 70px;
     height: 70px;
     background-color: orange;
-    animation: shining 140s linear both infinite;
     background: #ffff77;
-    box-shadow: 0 0 50px 10px #ffff77, 0 0 50px 35px #ffff77;
+    box-shadow: 0 0 48px 10px #ffff77, 0 0 55px #ffff77;
 }
 .moon {
     width: 65px;
     height: 65px;
     background-color: #fcfcfc;
     box-shadow: 0 0 30px #d3e6ff;
-    animation: shining 140s linear 70s both infinite;
+    animation-delay: 70s;
     /* animation: rotate 5s; */
 }
 /* end sky section */
 
-/* start grass section */
+/* Start of grass section */
 .grass {
-    width: 100%;
     height: 43%;
     background: url(./../img/gress_bg.png), url(../img/field.png),
         url(../img/mountine.png), transparent;
@@ -329,7 +144,6 @@ body {
     background-position: -2px bottom;
 }
 .tree_wrapper {
-    width: 100%;
     display: flex;
     justify-content: space-around;
     position: absolute;
@@ -340,99 +154,33 @@ body {
     width: auto;
     margin-top: 23px;
 }
-/* and grass section */
+/* And of grass section */
 
-/* road section */
+/* Start road section */
 .road {
-    width: 100%;
     height: 28%;
     background-color: dimgray;
     border-top: 10px solid grey;
     border-bottom: 10px solid grey;
 }
 .line {
-    width: 100%;
     height: 0;
     border: 5px dashed #fff;
     position: absolute;
     top: 45%;
 }
-.mario {
+.road img {
     position: absolute;
-    top: -27%;
     left: 0;
+}
+.mario {
+    top: -27%;
     animation: drive 6s 4s both infinite linear;
 }
 .luigi {
-    position: absolute;
     bottom: 10%;
-    left: 0;
     animation: drive 9s both infinite linear;
 }
+/* And of road section  */
 
-@keyframes drive {
-    0% {
-        left: -500px;
-    }
-    100% {
-        left: calc(100%);
-    }
-}
-
-@keyframes cloudFly {
-    0% {
-        left: -300px;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-@keyframes shining {
-    0% {
-        top: 65%;
-        left: 14%;
-    }
-    6.25% {
-        top: 50%;
-        left: 19%;
-    }
-    12.5% {
-        top: 31%;
-        left: 28%;
-    }
-    18.75% {
-        top: 20%;
-        left: 36%;
-    }
-
-    22.92% {
-        top: 12%;
-        left: 44%;
-    }
-    27.8% {
-        top: 12%;
-        left: 56%;
-    }
-
-    31.25% {
-        top: 20%;
-        left: 64%;
-    }
-    37.5% {
-        top: 31%;
-        left: 73%;
-    }
-    43.75% {
-        top: 50%;
-        left: 81%;
-    }
-    50% {
-        top: 65%;
-        left: 86%;
-    }
-    100% {
-        top: 65%;
-        left: 86%;
-    }
-}
+/* animation file */

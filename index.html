@@ -8,24 +8,84 @@
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
-        <div class="universe" id="universe">
+        <div class="universe w100" id="universe">
             <span class="cometa"></span>
             <span class="cometa cometa-2"></span>
         </div>
-        <div class="night_shadow"></div>
-        <div class="horizon_bg"></div>
-        <div class="horizon"></div>
+        <div class="night_shadow w100"></div>
+        <div class="horizon_bg w100"></div>
+        <div class="horizon w100"></div>
         <div class="sun"></div>
         <div class="moon"></div>
-        <div class="sky">
-            <img src="./img/cloud.png" alt="cloud" class="cloud" />
-            <img src="./img/cloud.png" alt="cloud" class="cloud" />
-            <img src="./img/cloud.png" alt="cloud" class="cloud" />
-            <img src="./img/cloud.png" alt="cloud" class="cloud" />
-            <img src="./img/cloud.png" alt="cloud" class="cloud" />
+        <div class="sky w100">
+            <img
+                src="./img/cloud.png"
+                alt="cloud"
+                class="cloud"
+                style="
+                    --delay: 12s;
+                    --duration: 65s;
+                    --z: 3;
+                    --o: 0.5;
+                    --width: 200px;
+                    --top: 160px;
+                "
+            />
+            <img
+                src="./img/cloud.png"
+                alt="cloud"
+                class="cloud"
+                style="
+                    --delay: 0s;
+                    --duration: 100s;
+                    --z: 10;
+                    --o: 0.6;
+                    --width: 170px;
+                    --top: 0;
+                "
+            />
+            <img
+                src="./img/cloud.png"
+                alt="cloud"
+                class="cloud"
+                style="
+                    --delay: -42s;
+                    --duration: 82s;
+                    --z: 6;
+                    --o: 0.7;
+                    --width: 250px;
+                    --top: 90px;
+                "
+            />
+            <img
+                src="./img/cloud.png"
+                alt="cloud"
+                class="cloud"
+                style="
+                    --delay: -20s;
+                    --duration: 90s;
+                    --z: 6;
+                    --o: 0.4;
+                    --width: 220px;
+                    --top: 130px;
+                "
+            />
+            <img
+                src="./img/cloud.png"
+                alt="cloud"
+                class="cloud"
+                style="
+                    --delay: -50s;
+                    --duration: 70s;
+                    --z: 6;
+                    --o: 0.45;
+                    --width: 190px;
+                    --top: 60px;
+                "
+            />
         </div>
-        <div class="grass">
-            <div class="tree_wrapper">
+        <div class="grass w100">
+            <div class="tree_wrapper w100">
                 <img src="./img/tree_2.png" alt="" class="tree" />
                 <img src="./img/tree_3.png" alt="" class="tree" />
                 <img src="./img/tree_4.png" alt="" class="tree" />
@@ -35,9 +95,9 @@
                 <img src="./img/tree_2.png" alt="" class="tree" />
             </div>
         </div>
-        <div class="road">
+        <div class="road w100">
             <img src="./img/mario.png" alt="mario first player" class="mario" />
-            <div class="line"></div>
+            <div class="line w100"></div>
             <img
                 src="./img/luigi.png"
                 alt="luigi second player"
