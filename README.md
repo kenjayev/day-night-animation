@@ -9,7 +9,8 @@ animation properties;
 colors;
 transforms;
 opacity;
+<br />
+<hr />
 
 ![alt text](img/for_readme/day.png "Title Text")
-<img src="img/for_readme/day.pnj" />
-<img src="img/for_readme/night" />
+![alt text](img/for_readme/nigh.png "Title Text")
