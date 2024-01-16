@@ -17,6 +17,7 @@ function stars() {
         star.style.height = 1.2 + size + "px";
         star.style.animationDuration = 10 + duration + "s";
         star.style.animationDelay = duration + "s";
+        universe.appendChild(star);
         i++;
     }
 }
