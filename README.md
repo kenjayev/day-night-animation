@@ -1,5 +1,5 @@
-##An animated one-page site
-
+<h1>An animated one-page site
+</h1>
 <hr />
 worked with these:
 <br />
@@ -9,6 +9,10 @@ animation properties;
 colors;
 transforms;
 opacity;
+<br />
+<b>Only desktop screens. Not for mob</b>
+<br />
+<hr />
 
-<img src="./img/for_readme/day" />
-<img src="./img/for_readme/night" />
+![alt text](img/for_readme/day.png "Title Text")
+![alt text](img/for_readme/night.png "Title Text")
